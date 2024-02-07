@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポップアップ表示</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button>ポップアップ表示</button>
+  <div class="popup">
+    <div class="content">
+      <p>サンプル</p>
+      <button id="close">閉じる</button>
+    </div>
+  </div>
+ <script>
+  $("button").on("click", function() {
+  $(".popup")
+    .addClass("show")
+    .fadeIn();
+});
+
+$("#close").on("click", function() {
+  $(".popup").fadeOut();
+});
+
+ </script>
+</body>
+</html>
